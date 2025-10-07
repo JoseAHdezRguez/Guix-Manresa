@@ -1,1 +1,519 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GUIX Manresa - Construcción y Acabados</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #1a365d 0%, #2563eb 100%);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+
+        /* Hero Section */
+         .hero {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 190px 2rem 100px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            width: 100vw;
+            height: 80vh;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23ffffff" fill-opacity="0.05" width="1200" height="600"/><g fill="%23ffffff" fill-opacity="0.1"><circle cx="100" cy="100" r="50"/><circle cx="800" cy="400" r="70"/><circle cx="1100" cy="200" r="40"/></g></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease 0.2s backwards;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(30, 64, 175, 0.8), rgba(246, 224, 59, 0.8)), 
+            url('https://github.com/JoseAHdezRguez/Guix-Manresa/blob/main/hero.jpg') center/cover no-repeat;
+            
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: white;
+            color: #1e40af;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: fadeInUp 1s ease 0.4s backwards;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        /* Sections */
+        section {
+            padding: 80px 2rem;
+        }
+
+        section:not(.hero) {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #1a365d;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 4px;
+            background: #3b82f6;
+            margin: 1rem auto;
+            border-radius: 2px;
+        }
+
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .about-card {
+            background: #f8fafc;
+            padding: 2rem;
+            border-radius: 15px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .about-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .about-card h3 {
+            color: #1e40af;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        /* Services */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 0;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-top: 4px solid #3b82f6;
+            overflow: hidden;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .service-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+         .service-content {
+            padding: 2rem;
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            color: #1e40af;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        /* Stats */
+        .stats {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 60px 2rem;
+            margin: 60px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Contact */
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .contact-card {
+            background: #f8fafc;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .contact-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #3b82f6;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a365d;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .nav-links {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+            
+            .logo {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">GUIX Manresa</div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Construcción y Acabados de Calidad</h1>
+            <p>Más de 10 años de experiencia en Barcelona. Comprometidos con la excelencia en cada proyecto.</p>
+            <a href="#contacto" class="cta-button">Solicitar Presupuesto</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="nosotros">
+        <h2 class="section-title">Sobre GUIX Manresa</h2>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto 3rem; font-size: 1.1rem; color: #666;">
+            Somos una empresa familiar fundada en 2013 en la ciudad de Manresa en la provincia de Barcelona. Contamos con un personal capacitado con más de 10 años de experiencia en las labores de construcción manteniéndonos al día con los avances tecnológicos y con equipamiento avanzado, comprometidos con la calidad de ejecución de nuestras obras.
+        </p>
+
+        <div class="about-grid">
+            <div class="about-card">
+                <h3>🎯 Misión</h3>
+                <p>Brindar servicios de construcción con total compromiso en calidad y cumplimiento de plazos, creando una confianza única con nuestros clientes como empresa responsable.</p>
+            </div>
+
+            <div class="about-card">
+                <h3>👁️ Visión</h3>
+                <p>Ofrecer la mejor solución constructiva optimizando costos mediante equipamiento y tecnología moderna, siendo empresa de referencia en construcción para el mercado público y privado.</p>
+            </div>
+
+            <div class="about-card">
+                <h3>💎 Valores</h3>
+                <p>Compromiso constante con clientes y proveedores, cuidado del medio ambiente y uso de tecnología de punta en todos nuestros proyectos.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <div class="stats">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <h3>10+</h3>
+                <p>Años de Experiencia</p>
+            </div>
+            <div class="stat-item">
+                <h3>2013</h3>
+                <p>Año de Fundación</p>
+            </div>
+            <div class="stat-item">
+                <h3>100%</h3>
+                <p>Satisfacción del Cliente</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <section id="servicios">
+        <h2 class="section-title">Nuestros Servicios</h2>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <img src="https://github.com/JoseAHdezRguez/Guix-Manresa/blob/main/muros.jpg" alt="Construcción de muros" class="service-image">
+                <div class="service-content">
+                    <h3>Construcción de muros y tabiques</h3>
+                    <p>Muros y tabiques con diferentes formatos de ladrillo, los cuales inclusive pueden cumplir funciones estructurales como de carga, portantes, de contención, los mismos cumplen con las normativas vigentes.</p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img src="https://github.com/JoseAHdezRguez/Guix-Manresa/blob/main/pladur.png" alt="Sistemas Pladur" class="service-image">
+                <div class="service-content">
+                    <h3>Sistemas Pladur®</h3>
+                    <p>Construcción de tabiques, trasdosados y techos con productos y sistemas Pladur®. Utilizamos placas de uso estándar, de yeso laminado para zonas húmedas, ignífugas para protección contra el fuego, con alto aislamiento acústico entre otras.</p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img src="https://github.com/JoseAHdezRguez/Guix-Manresa/blob/main/fixrock.jpg" alt="Aislamiento térmico" class="service-image">
+                <div class="service-content">
+                    <h3>Aislamiento térmico y acústico</h3>
+                    <p>Excelente aislamiento térmico y acústico en fachadas de fábrica de ladrillo con trasdosado cerámico o placa de yeso laminado con paneles de lana de roca.</p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img src="https://github.com/JoseAHdezRguez/Guix-Manresa/blob/main/yeso.jpg" alt="Aplicación de yeso" class="service-image">
+                <div class="service-content">
+                    <h3>Aplicación de yeso</h3>
+                    <p>Aplicación tanto de forma manual como de proyección obteniendo una distribución rápida y uniforme, cumpliendo con todas las normativas vigentes.</p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img src="https://github.com/JoseAHdezRguez/Guix-Manresa/blob/main/mortero.jpg" alt="Aplicación de morteros" class="service-image">
+                <div class="service-content">
+                    <h3>Aplicación de morteros</h3>
+                    <p>Manual y de proyección con equipos especializados. Cubrimos grandes áreas en menos tiempo con calidad y uniformidad del acabado, ahorrando tiempo y costos.</p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img src="https://github.com/JoseAHdezRguez/Guix-Manresa/blob/main/baño.png" alt="Proyectos completos" class="service-image">
+                <div class="service-content">
+                    <h3>Proyectos completos</h3>
+                    <p>Construcción y reforma de viviendas, escuelas, naves industriales, bibliotecas, hospitales y más, superando todas las expectativas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reformas Section -->
+    <section id="Reformas">
+        <h2 class="section-title">Tu hogar merece lo mejor, nosotros lo construimos contigo
+        </h2>
+
+        <div class="services-grid">
+
+            <div class="service-card">
+                <div class="service-content">
+                    <img src="https://github.com/JoseAHdezRguez/Guix-Manresa/blob/main/Sala.webp" alt="Proyectos completos" class="service-image">
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-content">
+                    <img src="https://github.com/JoseAHdezRguez/Guix-Manresa/blob/main/Cocina.webp" alt="Proyectos completos" class="service-image">
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-content">
+                    <img src="https://github.com/JoseAHdezRguez/Guix-Manresa/blob/main/Sala2.webp" alt="Proyectos completos" class="service-image">
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-content">
+                    <img src="https://github.com/JoseAHdezRguez/Guix-Manresa/blob/main/Cocina2.webp" alt="Proyectos completos" class="service-image">
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-content">
+                    <img src="https://github.com/JoseAHdezRguez/Guix-Manresa/blob/main/Sala3.webp" alt="Proyectos completos" class="service-image">
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-content">
+                    <img src="https://github.com/JoseAHdezRguez/Guix-Manresa/blob/main/Cocina3.webp" alt="Proyectos completos" class="service-image">
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-content">
+                    <img src="https://github.com/JoseAHdezRguez/Guix-Manresa/blob/main/Cocina4.webp" alt="Proyectos completos" class="service-image">
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-content">
+                    <img src="https://github.com/JoseAHdezRguez/Guix-Manresa/blob/main/Cocina5.webp" alt="Proyectos completos" class="service-image">
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-content">
+                    <img src="https://github.com/JoseAHdezRguez/Guix-Manresa/blob/main/Cocina6.webp" alt="Proyectos completos" class="service-image">
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto">
+        <h2 class="section-title">Contacto</h2>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto 3rem; font-size: 1.1rem; color: #666;">
+            ¿Tienes un proyecto en mente? Contáctanos y te ofreceremos la mejor solución constructiva.
+        </p>
+
+        <div class="contact-info">
+            <div class="contact-card">
+                <div class="contact-icon">📍</div>
+                <h3>Ubicación</h3>
+                <p>Manresa<br>Barcelona, España</p>
+            </div>
+
+            <div class="contact-card">
+                <div class="contact-icon">📧</div>
+                <h3>Email</h3>
+                <p>info@guixmanresa.es</p>
+            </div>
+
+            <div class="contact-card">
+                <div class="contact-icon">📞</div>
+                <h3>Teléfono</h3>
+                <p>Solicite presupuesto<br>sin compromiso</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 GUIX Manresa. Todos los derechos reservados.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;">Empresa familiar de construcción en Manresa, Barcelona</p>
+    </footer>
+</body>
+</html>
