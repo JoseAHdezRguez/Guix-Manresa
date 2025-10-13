@@ -275,7 +275,7 @@ footer {
 }
 
 .logo {
-  width: 100px;
+  width: 150px;
   height: auto;
 }
 
@@ -292,7 +292,7 @@ footer {
 
   .logo {
     content: url("logo-movil.svg");
-    width: 60px;
+    width: 90px;
     height: auto;
   }
 }
