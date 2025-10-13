@@ -14,16 +14,27 @@ Este es un sitio web estático desarrollado para GUIX Manresa, una empresa famil
 ├── style.css           # Estilos CSS con diseño responsivo
 ├── WARP.md            # Guía para desarrollo con WARP
 ├── README.md          # Este archivo de documentación
-├── Logo.png           # Logo principal de la empresa
-├── logo-movil.svg     # Logo optimizado para móviles
-├── hero.jpg           # Imagen de fondo del hero
-└── assets/            # Carpeta con imágenes de servicios y portafolio
-    ├── muros.jpg
-    ├── pladur.png
-    ├── yeso.jpg
-    ├── mortero.jpg
-    ├── Cocina*.webp     # Imágenes de cocinas renovadas
-    └── Sala*.webp       # Imágenes de salas renovadas
+└── assets/            # Carpeta organizada con todos los recursos
+    ├── logos/         # Logotipos de la empresa
+    │   ├── Logo.png
+    │   ├── logo.svg
+    │   └── logo-movil.svg
+    ├── images/        # Imágenes generales
+    │   ├── hero.jpg
+    │   ├── mision.png
+    │   ├── Vision.png
+    │   ├── Valores.png
+    │   └── ubica.jpg
+    ├── services/      # Imágenes de servicios técnicos
+    │   ├── muros.jpg
+    │   ├── pladur.png
+    │   ├── fixrock.jpg
+    │   ├── yeso.jpg
+    │   ├── mortero.jpg
+    │   └── baño.png
+    └── portfolio/     # Galería de proyectos
+        ├── Cocina*.webp     # Imágenes de cocinas renovadas
+        └── Sala*.webp       # Imágenes de salas renovadas
 ```
 
 ### Tecnologías Utilizadas
@@ -101,11 +112,24 @@ php -S localhost:8000
 </section>
 ```
 
-### Agregar Nuevas Imágenes de Servicios
+### Agregar Nuevas Imágenes
+
+#### Servicios Técnicos
 1. Optimizar imágenes (preferiblemente WebP)
-2. Subir a la carpeta del proyecto
+2. Subir a `assets/services/`
 3. Actualizar referencias en `index.html`
 4. Mantener tamaño mínimo de 280px de ancho
+
+#### Portfolio de Proyectos
+1. Optimizar imágenes en formato WebP
+2. Subir a `assets/portfolio/`
+3. Nomenclatura: `Cocina1.webp`, `Sala1.webp`, etc.
+4. Añadir referencias en la sección "Reformas"
+
+#### Logotipos
+1. Mantener formatos SVG y PNG
+2. Subir a `assets/logos/`
+3. Actualizar rutas en HTML y CSS
 
 ### Modificar Estilos
 - Colores principales: Líneas 16, 54, 139 en `style.css`
@@ -145,9 +169,13 @@ git pull origin main
 ## 📦 Optimización
 
 ### Imágenes
-- **Formato**: WebP para fotografías, SVG para logos
-- **Tamaño**: Máximo 200KB por imagen
-- **Dimensiones**: Servicios 280px mínimo, Hero 1200px
+- **Formato**: WebP para fotografías, SVG para logos, PNG para logotipos complejos
+- **Tamaño**: Máximo 200KB por imagen de servicio, 150KB para portfolio
+- **Dimensiones**: 
+  - Servicios: 280px mínimo de ancho
+  - Portfolio: 300px mínimo de ancho  
+  - Hero: 1200px de ancho
+  - Logos: Mantener proporciones originales
 
 ### Performance
 - CSS minificado en producción

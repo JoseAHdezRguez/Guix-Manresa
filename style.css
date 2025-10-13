@@ -93,7 +93,7 @@ nav {
 
 .hero {
   background: linear-gradient(rgba(30, 64, 175, 0.8), rgba(246, 224, 59, 0.8)),
-    url("hero.jpg") center/cover no-repeat;
+    url("assets/images/hero.jpg") center/cover no-repeat;
 }
 
 .cta-button {
@@ -291,7 +291,7 @@ footer {
   }
 
   .logo {
-    content: url("logo-movil.svg");
+    content: url("assets/logos/logo-movil.svg");
     width: 70px;
     height: auto;
   }

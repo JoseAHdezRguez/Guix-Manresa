@@ -12,7 +12,11 @@ This is a static website for GUIX Manresa, a construction company based in Barce
 - **Static HTML/CSS Website**: Single-page application with no framework dependencies
 - **index.html**: Main HTML file containing all page sections (hero, about, services, contact)
 - **style.css**: Comprehensive CSS with modern styling, animations, and responsive design
-- **Assets**: Image files (.webp, .jpg, .png, .svg) for services portfolio and company branding
+- **assets/**: Organized folder structure for all media assets
+  - **logos/**: Company logos (PNG, SVG)
+  - **images/**: General images (hero, mission, vision, values)
+  - **services/**: Technical service images (construction, pladur, etc.)
+  - **portfolio/**: Project gallery (kitchens and living rooms)
 
 ### Key Sections
 - Header with navigation
@@ -78,10 +82,24 @@ Get-ChildItem -Recurse | Sort-Object Length -Descending | Select-Object Name, Le
 
 ## Content Management
 
-### Adding New Service Images
-- Images should be optimized (WebP preferred for photos, SVG for logos)
+### Adding New Assets
+
+#### Service Images
+- Place in `assets/services/` folder
+- Images should be optimized (WebP preferred for photos)
 - Service images are 280px width minimum for grid layout
-- Update both the HTML img src and alt attributes
+- Update references in HTML with `assets/services/filename`
+
+#### Portfolio Images
+- Place in `assets/portfolio/` folder
+- Use WebP format for optimal compression
+- Follow naming convention: Cocina1.webp, Sala1.webp
+- Update references in "Reformas" section
+
+#### Logos
+- Place in `assets/logos/` folder
+- Maintain SVG format for scalability
+- Update references in both HTML and CSS files
 
 ### Updating Company Information
 - Contact details are in the #contacto section
@@ -89,9 +107,11 @@ Get-ChildItem -Recurse | Sort-Object Length -Descending | Select-Object Name, Le
 - Mission/Vision/Values are in the .about-grid section
 
 ### Portfolio Images
-- Kitchen images: Cocina.webp, Cocina2.webp, etc.
-- Living room images: Sala.webp, Sala2.webp, etc.
-- All portfolio images follow the same naming convention
+- **Location**: `assets/portfolio/` folder
+- **Kitchen images**: Cocina.webp, Cocina2.webp, etc.
+- **Living room images**: Sala.webp, Sala2.webp, etc.
+- **Format**: WebP for optimal compression
+- All portfolio images follow consistent naming convention
 
 ## Responsive Design Considerations
 - Navigation collapses on mobile (768px breakpoint)
@@ -100,10 +120,19 @@ Get-ChildItem -Recurse | Sort-Object Length -Descending | Select-Object Name, Le
 - Hero section height adapts to viewport
 
 ## Image Assets
-- **Logos**: logo.svg (desktop), logo-movil.svg (mobile)
-- **Hero background**: hero.jpg
-- **Service images**: Technical images for each construction service
-- **Portfolio**: Before/after renovation photos in WebP format
+- **Logos**: `assets/logos/` - Logo.png (desktop), logo-movil.svg (mobile), logo.svg
+- **General Images**: `assets/images/` - hero.jpg, mission/vision/values images
+- **Service Images**: `assets/services/` - Technical images for each construction service  
+- **Portfolio**: `assets/portfolio/` - Renovation project photos in WebP format
+
+### Organized Structure
+```
+assets/
+├── logos/          # All company branding
+├── images/         # General website images  
+├── services/       # Technical service photos
+└── portfolio/      # Project showcase gallery
+```
 
 ## Browser Compatibility
 - Modern browsers supporting CSS Grid and Flexbox
