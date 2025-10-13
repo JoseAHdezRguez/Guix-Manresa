@@ -16,7 +16,6 @@ Este es un sitio web estático desarrollado para GUIX Manresa, una empresa famil
 ├── README.md          # Este archivo de documentación
 └── assets/            # Carpeta organizada con todos los recursos
     ├── logos/         # Logotipos de la empresa
-    │   ├── Logo.png
     │   ├── logo.svg
     │   └── logo-movil.svg
     ├── images/        # Imágenes generales

@@ -120,7 +120,7 @@ Get-ChildItem -Recurse | Sort-Object Length -Descending | Select-Object Name, Le
 - Hero section height adapts to viewport
 
 ## Image Assets
-- **Logos**: `assets/logos/` - Logo.png (desktop), logo-movil.svg (mobile), logo.svg
+- **Logos**: `assets/logos/` - logo.svg (desktop), logo-movil.svg (mobile)
 - **General Images**: `assets/images/` - hero.jpg, mission/vision/values images
 - **Service Images**: `assets/services/` - Technical images for each construction service  
 - **Portfolio**: `assets/portfolio/` - Renovation project photos in WebP format
