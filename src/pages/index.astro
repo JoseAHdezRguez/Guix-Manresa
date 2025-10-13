@@ -1,11 +1,76 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
 ---
 
 <Layout>
-	<Welcome />
+	<Header />
+	<Hero />
+	
+	<!-- About Section -->
+	<section id="nosotros" class="py-20 bg-white">
+		<div class="max-w-6xl mx-auto px-4">
+			<h2 class="text-3xl md:text-4xl font-bold text-center text-blue-900 mb-12">
+				Sobre GUIX Manresa
+				<div class="w-24 h-1 bg-blue-500 mx-auto mt-4 rounded"></div>
+			</h2>
+			
+			<p class="text-center max-w-4xl mx-auto text-lg text-gray-600 mb-12">
+				Somos una empresa familiar fundada en 2013 en la ciudad de Manresa en la provincia de Barcelona. 
+				Contamos con un personal capacitado con más de 10 años de experiencia en las labores de construcción 
+				manteniéndonos al día con los avances tecnológicos y con equipamiento avanzado, comprometidos con la 
+				calidad de ejecución de nuestras obras.
+			</p>
+
+			<div class="grid md:grid-cols-3 gap-8">
+				<div class="bg-gray-50 p-8 rounded-2xl hover:shadow-lg transition-shadow duration-300">
+					<div class="text-4xl mb-4">🎯</div>
+					<h3 class="text-xl font-bold text-blue-900 mb-4">Misión</h3>
+					<p class="text-gray-600">
+						Brindar servicios de construcción con total compromiso en calidad y cumplimiento de plazos, 
+						creando una confianza única con nuestros clientes como empresa responsable.
+					</p>
+				</div>
+
+				<div class="bg-gray-50 p-8 rounded-2xl hover:shadow-lg transition-shadow duration-300">
+					<div class="text-4xl mb-4">👁️</div>
+					<h3 class="text-xl font-bold text-blue-900 mb-4">Visión</h3>
+					<p class="text-gray-600">
+						Ofrecer la mejor solución constructiva optimizando costos mediante equipamiento y tecnología moderna, 
+						siendo empresa de referencia en construcción para el mercado público y privado.
+					</p>
+				</div>
+
+				<div class="bg-gray-50 p-8 rounded-2xl hover:shadow-lg transition-shadow duration-300">
+					<div class="text-4xl mb-4">💎</div>
+					<h3 class="text-xl font-bold text-blue-900 mb-4">Valores</h3>
+					<p class="text-gray-600">
+						Compromiso constante con clientes y proveedores, cuidado del medio ambiente y uso de 
+						tecnología de punta en todos nuestros proyectos.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Stats Section -->
+	<section class="bg-gradient-to-r from-blue-900 to-blue-600 text-white py-16">
+		<div class="max-w-6xl mx-auto px-4">
+			<div class="grid md:grid-cols-3 gap-8 text-center">
+				<div class="transform hover:scale-105 transition-transform duration-300">
+					<h3 class="text-4xl md:text-5xl font-bold mb-2">10+</h3>
+					<p class="text-xl opacity-90">Años de Experiencia</p>
+				</div>
+				<div class="transform hover:scale-105 transition-transform duration-300">
+					<h3 class="text-4xl md:text-5xl font-bold mb-2">2013</h3>
+					<p class="text-xl opacity-90">Año de Fundación</p>
+				</div>
+				<div class="transform hover:scale-105 transition-transform duration-300">
+					<h3 class="text-4xl md:text-5xl font-bold mb-2">100%</h3>
+					<p class="text-xl opacity-90">Satisfacción del Cliente</p>
+				</div>
+			</div>
+		</div>
+	</section>
 </Layout>

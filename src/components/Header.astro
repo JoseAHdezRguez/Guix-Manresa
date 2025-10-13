@@ -1,0 +1,88 @@
+---
+// No props needed for this component
+---
+
+<header class="bg-gradient-to-r from-blue-900 via-blue-700 to-blue-500 text-white px-4 py-4 fixed w-full top-0 z-50 shadow-lg">
+  <nav class="max-w-6xl mx-auto flex justify-between items-center">
+    <img 
+      src="/assets/logos/logo.svg" 
+      alt="GUIX Manresa Logo" 
+      class="w-28 h-auto lg:w-32"
+    />
+    
+    <!-- Desktop Navigation -->
+    <ul class="hidden md:flex space-x-8 font-medium">
+      <li>
+        <a href="#inicio" class="hover:opacity-80 transition-opacity duration-300">
+          Inicio
+        </a>
+      </li>
+      <li>
+        <a href="#nosotros" class="hover:opacity-80 transition-opacity duration-300">
+          Nosotros
+        </a>
+      </li>
+      <li>
+        <a href="#servicios" class="hover:opacity-80 transition-opacity duration-300">
+          Servicios
+        </a>
+      </li>
+      <li>
+        <a href="#contacto" class="hover:opacity-80 transition-opacity duration-300">
+          Contacto
+        </a>
+      </li>
+    </ul>
+
+    <!-- Mobile Navigation Button -->
+    <button id="mobile-menu-button" class="md:hidden">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+  </nav>
+
+  <!-- Mobile Navigation Menu -->
+  <div id="mobile-menu" class="md:hidden hidden mt-4 pb-4">
+    <ul class="space-y-4 text-center">
+      <li>
+        <a href="#inicio" class="block hover:opacity-80 transition-opacity duration-300">
+          Inicio
+        </a>
+      </li>
+      <li>
+        <a href="#nosotros" class="block hover:opacity-80 transition-opacity duration-300">
+          Nosotros
+        </a>
+      </li>
+      <li>
+        <a href="#servicios" class="block hover:opacity-80 transition-opacity duration-300">
+          Servicios
+        </a>
+      </li>
+      <li>
+        <a href="#contacto" class="block hover:opacity-80 transition-opacity duration-300">
+          Contacto
+        </a>
+      </li>
+    </ul>
+  </div>
+</header>
+
+<script>
+  // Mobile menu toggle
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  mobileMenuButton?.addEventListener('click', () => {
+    mobileMenu?.classList.toggle('hidden');
+  });
+
+  // Close mobile menu when clicking on a link
+  const mobileLinks = document.querySelectorAll('#mobile-menu a');
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu?.classList.add('hidden');
+    });
+  });
+</script>
