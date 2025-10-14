@@ -1,0 +1,112 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+---
+
+<Layout title="Servicios - GUIX Manresa" description="Servicios de construcción de GUIX Manresa: muros, sistemas Pladur, aislamiento térmico y acústico, aplicación de yeso y morteros, y proyectos completos.">
+  <Header />
+
+  <!-- Hero -->
+  <section class="relative bg-gradient-to-br from-blue-900 via-blue-700 to-blue-500 text-white pt-32 pb-16">
+    <div class="absolute inset-0 bg-black bg-opacity-30">
+      <img src="/assets/images/hero.jpg" alt="Servicios GUIX Manresa" class="w-full h-full object-cover mix-blend-overlay opacity-50" />
+    </div>
+
+    <div class="relative z-10 max-w-6xl mx-auto px-4 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Nuestros Servicios</h1>
+      <p class="text-lg md:text-xl opacity-90 max-w-3xl mx-auto">
+        Soluciones integrales de construcción, reformas y acabados con los más altos estándares de calidad.
+      </p>
+    </div>
+  </section>
+
+  <!-- Services Grid -->
+  <section class="py-16 bg-white" id="servicios">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Muros y tabiques -->
+        <article class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow overflow-hidden border-t-4 border-blue-500">
+          <img src="/assets/services/muros.webp" alt="Construcción de muros y tabiques" class="w-full h-52 object-cover" />
+          <div class="p-6 space-y-3">
+            <h3 class="text-xl font-semibold text-blue-900">Construcción de muros y tabiques</h3>
+            <p class="text-gray-600 text-sm">
+              Muros y tabiques con diferentes formatos de ladrillo, incluyendo funciones estructurales (carga, portantes, contención) cumpliendo normativas vigentes.
+            </p>
+          </div>
+        </article>
+
+        <!-- Pladur -->
+        <article class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow overflow-hidden border-t-4 border-blue-500">
+          <img src="/assets/services/pladur.webp" alt="Sistemas Pladur" class="w-full h-52 object-cover" />
+          <div class="p-6 space-y-3">
+            <h3 class="text-xl font-semibold text-blue-900">Sistemas Pladur®</h3>
+            <p class="text-gray-600 text-sm">
+              Tabiques, trasdosados y techos con placas para usos estándar, zonas húmedas, ignífugas y con alto aislamiento acústico.
+            </p>
+          </div>
+        </article>
+
+        <!-- Aislamiento -->
+        <article class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow overflow-hidden border-t-4 border-blue-500">
+          <img src="/assets/services/fixrock.webp" alt="Aislamiento térmico y acústico" class="w-full h-52 object-cover" />
+          <div class="p-6 space-y-3">
+            <h3 class="text-xl font-semibold text-blue-900">Aislamiento térmico y acústico</h3>
+            <p class="text-gray-600 text-sm">
+              Soluciones de alto rendimiento con paneles de lana de roca y sistemas adaptados a fachadas y trasdosados.
+            </p>
+          </div>
+        </article>
+
+        <!-- Yeso -->
+        <article class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow overflow-hidden border-t-4 border-blue-500">
+          <img src="/assets/services/yeso.webp" alt="Aplicación de yeso" class="w-full h-52 object-cover" />
+          <div class="p-6 space-y-3">
+            <h3 class="text-xl font-semibold text-blue-900">Aplicación de yeso</h3>
+            <p class="text-gray-600 text-sm">
+              Aplicación manual y por proyección para superficies uniformes y de rápida ejecución, cumpliendo normativas vigentes.
+            </p>
+          </div>
+        </article>
+
+        <!-- Morteros -->
+        <article class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow overflow-hidden border-t-4 border-blue-500">
+          <img src="/assets/services/mortero.webp" alt="Aplicación de morteros" class="w-full h-52 object-cover" />
+          <div class="p-6 space-y-3">
+            <h3 class="text-xl font-semibold text-blue-900">Aplicación de morteros</h3>
+            <p class="text-gray-600 text-sm">
+              Ejecución manual y con proyección para cubrir grandes áreas con calidad, uniformidad y ahorro de tiempo.
+            </p>
+          </div>
+        </article>
+
+        <!-- Proyectos completos -->
+        <article class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow overflow-hidden border-t-4 border-blue-500">
+          <img src="/assets/services/baño.webp" alt="Proyectos completos" class="w-full h-52 object-cover" />
+          <div class="p-6 space-y-3">
+            <h3 class="text-xl font-semibold text-blue-900">Proyectos completos</h3>
+            <p class="text-gray-600 text-sm">
+              Construcción y reforma de viviendas, escuelas, naves industriales, bibliotecas y hospitales, superando expectativas.
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-gradient-to-r from-blue-900 to-blue-600 text-white py-16">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">¿Necesitas un presupuesto?</h2>
+      <p class="text-lg opacity-90 mb-6">Escríbenos y te responderemos en menos de 24 horas.</p>
+      <a href="/contacto" class="inline-block bg-white text-blue-900 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transform hover:-translate-y-1 transition-all duration-300 shadow-lg">Contactar ahora</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-blue-900 text-white py-8">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <p class="text-lg">&copy; 2025 GUIX Manresa. Todos los derechos reservados.</p>
+      <p class="mt-2 opacity-90">Empresa familiar de construcción en Manresa, Barcelona</p>
+    </div>
+  </footer>
+</Layout>
