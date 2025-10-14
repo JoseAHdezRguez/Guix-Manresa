@@ -1,0 +1,225 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+---
+
+<Layout title="Nosotros - GUIX Manresa" description="Conoce más sobre GUIX Manresa, empresa familiar de construcción con más de 10 años de experiencia en Barcelona">
+  <Header />
+  
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-br from-blue-900 via-blue-700 to-blue-500 text-white pt-32 pb-20">
+    <div class="absolute inset-0 bg-black bg-opacity-30">
+      <img 
+        src="/assets/images/hero.jpg" 
+        alt="Equipo GUIX Manresa" 
+        class="w-full h-full object-cover mix-blend-overlay opacity-50"
+      />
+    </div>
+    
+    <div class="relative z-10 max-w-6xl mx-auto px-4 text-center">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+        Sobre GUIX Manresa
+      </h1>
+      <p class="text-xl md:text-2xl opacity-90 max-w-3xl mx-auto">
+        Una empresa familiar comprometida con la excelencia en construcción desde 2013
+      </p>
+    </div>
+  </section>
+
+  <!-- Company History -->
+  <section class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-6">
+            Nuestra Historia
+          </h2>
+          <div class="space-y-6 text-gray-600 text-lg leading-relaxed">
+            <p>
+              Fundada en <strong class="text-blue-900">2013</strong> en la hermosa ciudad de Manresa, 
+              en la provincia de Barcelona, GUIX Manresa nace del sueño de una familia apasionada 
+              por la construcción y los acabados de calidad.
+            </p>
+            <p>
+              Con más de una década de experiencia en el sector, hemos construido nuestra reputación 
+              sobre los pilares fundamentales de la <strong class="text-blue-900">calidad</strong>, 
+              la <strong class="text-blue-900">confianza</strong> y el 
+              <strong class="text-blue-900">compromiso</strong> con cada uno de nuestros clientes.
+            </p>
+            <p>
+              Nuestro equipo está formado por profesionales altamente capacitados que se mantienen 
+              constantemente actualizados con los últimos avances tecnológicos y las mejores prácticas 
+              del sector de la construcción.
+            </p>
+          </div>
+        </div>
+        
+        <div class="relative">
+          <div class="bg-gradient-to-br from-blue-100 to-blue-50 p-8 rounded-2xl shadow-lg">
+            <div class="grid grid-cols-2 gap-6 text-center">
+              <div class="bg-white p-6 rounded-xl shadow-md">
+                <div class="text-3xl font-bold text-blue-900 mb-2">2013</div>
+                <div class="text-gray-600">Fundación</div>
+              </div>
+              <div class="bg-white p-6 rounded-xl shadow-md">
+                <div class="text-3xl font-bold text-blue-900 mb-2">10+</div>
+                <div class="text-gray-600">Años de Experiencia</div>
+              </div>
+              <div class="bg-white p-6 rounded-xl shadow-md">
+                <div class="text-3xl font-bold text-blue-900 mb-2">100%</div>
+                <div class="text-gray-600">Satisfacción</div>
+              </div>
+              <div class="bg-white p-6 rounded-xl shadow-md">
+                <div class="text-3xl font-bold text-blue-900 mb-2">∞</div>
+                <div class="text-gray-600">Compromiso</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission, Vision, Values -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold text-center text-blue-900 mb-4">
+        Nuestros Principios
+      </h2>
+      <div class="w-24 h-1 bg-blue-500 mx-auto mb-16 rounded"></div>
+      
+      <div class="grid lg:grid-cols-3 gap-8">
+        <!-- Mission -->
+        <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+            <div class="text-3xl">🎯</div>
+          </div>
+          <h3 class="text-2xl font-bold text-blue-900 mb-4 text-center">Misión</h3>
+          <p class="text-gray-600 text-center leading-relaxed">
+            Brindar servicios de construcción con total compromiso en calidad y cumplimiento 
+            de plazos, creando una confianza única con nuestros clientes como empresa responsable.
+          </p>
+        </div>
+
+        <!-- Vision -->
+        <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+            <div class="text-3xl">👁️</div>
+          </div>
+          <h3 class="text-2xl font-bold text-blue-900 mb-4 text-center">Visión</h3>
+          <p class="text-gray-600 text-center leading-relaxed">
+            Ofrecer la mejor solución constructiva optimizando costos mediante equipamiento 
+            y tecnología moderna, siendo empresa de referencia en construcción para el mercado 
+            público y privado.
+          </p>
+        </div>
+
+        <!-- Values -->
+        <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+            <div class="text-3xl">💎</div>
+          </div>
+          <h3 class="text-2xl font-bold text-blue-900 mb-4 text-center">Valores</h3>
+          <p class="text-gray-600 text-center leading-relaxed">
+            Compromiso constante con clientes y proveedores, cuidado del medio ambiente 
+            y uso de tecnología de punta en todos nuestros proyectos.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team & Expertise -->
+  <section class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-4">
+          Nuestro Equipo y Experiencia
+        </h2>
+        <div class="w-24 h-1 bg-blue-500 mx-auto mb-6 rounded"></div>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          Contamos con un equipo de profesionales altamente calificados, cada uno especializado 
+          en diferentes áreas de la construcción y los acabados.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="text-center group hover:bg-blue-50 p-6 rounded-xl transition-colors duration-300">
+          <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mb-4 mx-auto group-hover:bg-blue-200 transition-colors duration-300">
+            <svg class="w-10 h-10 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+              <path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z"></path>
+            </svg>
+          </div>
+          <h3 class="font-bold text-blue-900 mb-2">Gestión de Proyectos</h3>
+          <p class="text-sm text-gray-600">Planificación y supervisión integral</p>
+        </div>
+
+        <div class="text-center group hover:bg-blue-50 p-6 rounded-xl transition-colors duration-300">
+          <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mb-4 mx-auto group-hover:bg-blue-200 transition-colors duration-300">
+            <svg class="w-10 h-10 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h4a1 1 0 010 2H6.414l2.293 2.293a1 1 0 01-1.414 1.414L5 6.414V8a1 1 0 01-2 0V4zm9 1a1 1 0 010-2h4a1 1 0 011 1v4a1 1 0 01-2 0V6.414l-2.293 2.293a1 1 0 11-1.414-1.414L13.586 5H12zm-9 7a1 1 0 012 0v1.586l2.293-2.293a1 1 0 111.414 1.414L6.414 15H8a1 1 0 010 2H4a1 1 0 01-1-1v-4zm13-1a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 010-2h1.586l-2.293-2.293a1 1 0 111.414-1.414L15 13.586V12a1 1 0 011-1z" clip-rule="evenodd"></path>
+            </svg>
+          </div>
+          <h3 class="font-bold text-blue-900 mb-2">Construcción</h3>
+          <p class="text-sm text-gray-600">Estructuras sólidas y duraderas</p>
+        </div>
+
+        <div class="text-center group hover:bg-blue-50 p-6 rounded-xl transition-colors duration-300">
+          <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mb-4 mx-auto group-hover:bg-blue-200 transition-colors duration-300">
+            <svg class="w-10 h-10 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M4 2a2 2 0 00-2 2v11a3 3 0 106 0V4a2 2 0 00-2-2H4zm1 14a1 1 0 100-2 1 1 0 000 2zm5-1.757l4.9-4.9a2 2 0 000-2.828L13.485 5.1a2 2 0 00-2.828 0L10 5.757v8.486zM16 18H9.071l6-6H16a2 2 0 012 2v2a2 2 0 01-2 2z" clip-rule="evenodd"></path>
+            </svg>
+          </div>
+          <h3 class="font-bold text-blue-900 mb-2">Acabados</h3>
+          <p class="text-sm text-gray-600">Detalles de alta calidad</p>
+        </div>
+
+        <div class="text-center group hover:bg-blue-50 p-6 rounded-xl transition-colors duration-300">
+          <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mb-4 mx-auto group-hover:bg-blue-200 transition-colors duration-300">
+            <svg class="w-10 h-10 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+          </div>
+          <h3 class="font-bold text-blue-900 mb-2">Control de Calidad</h3>
+          <p class="text-sm text-gray-600">Supervisión en cada etapa</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location -->
+  <section class="py-20 bg-gradient-to-r from-blue-900 to-blue-600 text-white">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">
+        Ubicados en el Corazón de Catalunya
+      </h2>
+      <p class="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
+        Desde Manresa, Barcelona, ofrecemos nuestros servicios a toda la región, 
+        aprovechando nuestra ubicación estratégica para llegar a cualquier proyecto.
+      </p>
+      <div class="flex flex-col md:flex-row justify-center items-center gap-8">
+        <div class="flex items-center gap-3">
+          <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+          </svg>
+          <span class="text-lg">Manresa, Barcelona</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+          </svg>
+          <span class="text-lg">Cobertura Regional</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-blue-900 text-white py-8">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <p class="text-lg">&copy; 2025 GUIX Manresa. Todos los derechos reservados.</p>
+      <p class="mt-2 opacity-90">Empresa familiar de construcción en Manresa, Barcelona</p>
+    </div>
+  </footer>
+</Layout>
